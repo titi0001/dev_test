@@ -6,7 +6,7 @@ export const createAppDataSource = (
 ): DataSource => {
   return new DataSource({
     type: 'mysql',
-    host: configService.get<string>('DB_HOST'),
+    host: configService.get<string>('DB_HOST_APP'),
     port: configService.get<number>('DB_PORT') || 3306,
     username: configService.get<string>('DB_USER'),
     password: configService.get<string>('DB_PASSWORD'),
